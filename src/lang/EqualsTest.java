@@ -8,27 +8,35 @@ public class EqualsTest {
 
 		Point point3 = point2;
 
-		//같은 객체를 가르키고 있는가
+		// 같은 객체를 가르키고 있는가
 		System.out.println(point1 == point2);
 		System.out.println(point2 == point3);
-		
-		//두 객체의 동질성 비교
-		//equals가 오버라이드가 안된 경우에는 ==로 비교한것과 동일하다
+
+		// 두 객체의 동질성 비교
+		// equals가 오버라이드가 안된 경우에는 == 로 비교한것과 동일하다
+		// override 하기전 결과     false / true
+		// override 하고난 후 결과 true / true
 		System.out.println(point1.equals(point2));
 		System.out.println(point2.equals(point3));
-		
+
 		System.out.println("===================");
-		
+
 		String s1 = new String("hello");
 		String s2 = new String("hello");
 		String s3 = s2;
-		
-		System.out.println(s1==s2);
-		System.out.println(s2==s3);
-		
+
+		System.out.println(s1 == s2);
+		System.out.println(s2 == s3);
+
 		System.out.println(s1.equals(s1));
 		System.out.println(s2.equals(s3));
 
+		// hashcode() 비교
+		System.out.println("hashCode() 비교");
+		System.out.println("s1.hashCode() : " + s1.hashCode());
+		System.out.println("s2.hashCode() : " + s2.hashCode());
+		System.out.println(System.identityHashCode(s1));
+		System.out.println(System.identityHashCode(s2));
 	}
 
 }
