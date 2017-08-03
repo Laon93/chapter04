@@ -37,6 +37,24 @@ public class EqualsTest {
 		System.out.println("s2.hashCode() : " + s2.hashCode());
 		System.out.println(System.identityHashCode(s1));
 		System.out.println(System.identityHashCode(s2));
+		
+		
+		//String Literal
+		String str1 = "hello";
+		String str2 = "hello";
+		String str3 = str2;
+		
+		//String을 생성하면 자동적으로 String str1 = new String()으로 저장된다더니!!
+		//왜 str1 == str2 가 true가 되지?!?
+		//==> 문자열 상수 Pool이라는 것이 존재하고 이 문자열 상수 Pool은 내가 "hello"라는 것을 저장하고 있게되는데
+		//여기에 hashcode와 reference를 확인하여 이와 동일한 문자가 존재하는지 확인을 한 후 존재하지 않으면 새로 생성하게되고,
+		//같은 문자가 있는 것으로 확인되었을 경우 기존에 만들어두었던 참조값을 반환해준다. 그렇기 때문에 str1 == str2가 된다.
+		//그렇기 때문에 String은 내부의 값을 변경할 수 없다 --> str2, str3도 hello를 가르키고 있는데 str1에서 내부의 값을 변경해버리면
+		//str2, str3가 가르키고 있는 값까지 변하기 때문
+		//Integer 역시 이와 같은 형식으로 만들어져있다. 그렇기 때문에 String과 Integer을 사용하는 것이 성능상 더 좋다.
+		System.out.println(str1 == str2);
+		System.out.println(str2 == str3);
+		
 	}
 
 }
