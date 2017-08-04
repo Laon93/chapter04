@@ -30,6 +30,24 @@ public class StringTest03 {
 		//문자열을 모두 대문자로 변경하여 출력한다.
 		System.out.println(str1.toUpperCase());
 		
+		//공백제거
+		String str2 = "aa bb cc dd ee ff";
+		System.out.println(str2.trim());
+		
+		//문자열 분리
+		String str3[] = str2.split(" "); 
+		for(int i=0; i<str3.length; i++)
+			System.out.println(str3[i]);
+		
+		System.out.println("".length());
+		String str5 = "";
+		System.out.println(str5.length());
+		
+		//배열이라서 length가 1 찍힌듯
+		String str4[] = {""};
+		System.out.println(str4.length);
+		
+		
 	}
 
 }
