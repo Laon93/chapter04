@@ -40,7 +40,7 @@ public class CalendarTest {
 		int min = cal.get(Calendar.MINUTE);
 		int sec = cal.get(Calendar.SECOND);
 		
-		System.out.println(year + "-" + (month + 1) + "-" + date + "  (" +days[day-1]+ ") "+
+		System.out.println(year + "-" + (month + 1) + "-" + date + "  (" +days[day-1]+ ") "
 				+ (am ==0? "am" : "pm") + hour + ":" + min);
 		
 	}
