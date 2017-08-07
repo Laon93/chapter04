@@ -21,7 +21,7 @@ public class FileCopy {
 				os.write(data);
 			}
 		} catch (FileNotFoundException e) {
-			System.out.println("Not found file Exception : " + e);
+			System.out.println("File not found Exception : " + e);
 		} catch (IOException e) {
 			System.out.println("I/O Error" + e);
 		} finally {
