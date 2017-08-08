@@ -52,7 +52,7 @@ public class PhoneList01 {
 					String s = st.nextToken();
 					if(index == 0)
 						System.out.print(s + " : ");
-					else if(index != 3)
+					else if(index == 1 || index == 2)
 						System.out.print(s + "-");
 					else 
 						System.out.print(s);
